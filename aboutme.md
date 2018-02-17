@@ -1,16 +1,15 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Here are some of my interests and some details about planned future projects.
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Aaron Lelevier. I am married with 4 kids. I enjoy spending time with my family, the outdoors, building a fixing things, and computer science, just to name a few.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+I've been using Python for 5 years. Currently I am a Python Developer at [ServiceChannel](https://servicechannel.info/). We're working within a distributed system architecture. It has both been fun and challenging.
 
-What else do you need?
+Overlapping that, I was using MS SQL for 4 years, during which time I was a Sr. Database Analyst at [The Hard Rock Hotel and Casino](https://hardrockhotel.com/).
 
-### my history
+### Recently
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I am recently doing Machine Learning and am half way through [Coursera Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning).

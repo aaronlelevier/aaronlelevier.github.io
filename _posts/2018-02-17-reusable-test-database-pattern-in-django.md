@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Reusable Test Database Pattern in Django!
-image: /img/django-dj-icon.png
 tags: [Django, Python, Testing]
 ---
 

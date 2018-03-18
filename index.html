@@ -1,0 +1,42 @@
+---
+layout: default
+about: 'about'
+title: Aaron Lelevier
+---
+
+
+<header class="site-header">
+  <a href="/about"><img class="profile" src="/assets/images/aaron-github.jpeg" alt="Author's profile picture"></a><br />
+  Hi, there! My name is <strong><a href="{{ page.about }}">{{ site.author }}</a></strong>, and I am one of many MotivatedCoder's.
+
+  <section class="social-section">
+    <a href="{{site.social.github}}"><i class="icon-github-circled"></i></a>
+    <a href="{{site.social.twitter}}"><i class=" icon-twitter"></i></a>
+    <a href="{{site.social.email}}"><i class=" icon-email"></i></a>
+    <a href="{{site.social.linkedin}}"><i class=" icon-linkedin"></i></a>
+    <a href="{{site.social.rss}}"><i class=" icon-rss"></i></a>
+  </section>
+</header>
+
+<main class="content" role="main">
+    {% for post in site.posts %}
+      {% unless post.draft %}
+        <article class="post">
+            <header class="post-header">
+              <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <span class="post-meta"><time datetime="{{ post.date | date:'%Y-%m-%d' }}">{{ post.date | date_to_string }}</time></span>
+            </header>
+
+            <section class="post-excerpt">
+                {% if post.intro %}
+                  <p> {{ post.intro }} </p>
+                {% else %}
+                  {{ post.excerpt }}
+                {% endif %}
+
+                <p> <a href="{{ post.url }}">Read more</a> </p>
+            </section>
+        </article>
+      {% endunless %}
+    {% endfor %}
+</main>

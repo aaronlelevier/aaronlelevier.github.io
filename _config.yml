@@ -1,0 +1,25 @@
+name: Aaron Lelevier
+meta_description: "Aaron Lelevier started MotivatedCoder, and here he writes all things computer programming related in order to help any under privileged person get motivated and get into coding by sharing inspiring content."
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+highlighter: rouge
+logo: false
+permalink: /:title/
+port: 4567
+
+# Details for the RSS feed generator
+url: 'www.motivatedcoder.com'
+author: 'Aaron Lelevier'
+
+social:
+  linkedin: 'https://linkedin.com/in/aaronlelevier/'
+  github: 'https://github.com/aaronlelevier'
+  twitter: 'http://twitter.com/aaronlelevier'
+  twitter_handle: '@aaronlelevier'
+  email: 'mailto:aaronlelevier@gmail.com'
+  rss: '/feed/atom.xml'

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: YAPVR | Yet Another Python Virtualenv Reference | Quickstart and Cheatsheet
+title: virtualenv Cheatsheet
 tags: [Python, virtualenv, cron]
 ---
 

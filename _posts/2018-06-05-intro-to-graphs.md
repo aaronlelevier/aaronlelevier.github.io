@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Graph Theory Crash Course
+title: Intro to Graphs
 tags: [Graphs, Algorithms, Data Structures, Neo4j]
 ---
 
@@ -86,9 +86,11 @@ A [bidirectional graph](https://en.wikipedia.org/wiki/Bidirected_graph) is a dir
 
 An example of this is Twitter. In Twitter you can follow someone, and they can follow you. In this case the relationship could be in both directions, but not necessarily.
 
-# Graph Data Structures
+# Graph Matricies
 
-There are many types of data structures that can be used with graphs and server different purposes for storing graph information for performant lookups.
+Different types of matrices can be used to represent a single graph's information. These matricies can be used to compute different information and for performant lookups.
+
+It is importatant to note that a single matrix may or may not be an [isomophism](https://en.wikipedia.org/wiki/Isomorphism) of the graph. This means that all information about the graph may not be represented in a single matrix. Diagonal matrices, for example, tell the number of incoming edges per node, but not which nodes are connected.
 
 ## Adjacency Matrix
 
@@ -117,7 +119,7 @@ How may steps does it take to traverse [2, 5, 8, 3, 4]?
 Can you take any random grid and also random sequence and comput this?
 ```
 
-This can be solved by loading the random 3x3 data into an *adjacency matrix*. The adjacent positions in the grid are connections, or `1`'s, otherwise they are `0`'s. Then this data structure is used as a lookup to solve how many steps it takes.
+This can be solved by loading the random 3x3 data into an *adjacency matrix*. The adjacent positions in the grid are connections, or `1`'s, otherwise they are `0`'s. An adjacency matrix can be used as a lookup to solve how many steps it takes.
 
 And *adjacency list* could also be used.
 

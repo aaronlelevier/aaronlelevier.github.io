@@ -4,6 +4,8 @@ title: PyTorch Developer Conference 2018 - PTDC - part 1
 tags: [PyTorch, Machine Learning, AI, Python, C++]
 ---
 
+![Imgur](https://i.imgur.com/XGC9TJO.png)
+
 This is my cliff notes style blog about my experience at PyTorch Developer Conference that happened on October 2, 2018. This is part 1 because as I was going through my notes, there was so much content and things to read and explain more, that it couldn't easily fit into one blog.
 
 ## Talks
@@ -19,9 +21,9 @@ Here are the links to all videos from the conference:
 
 ### Keynote Jerome Presenti
 
-[DensePose](http://densepose.org/)
+Recent breakthroughs in AI are things such as [DensePose](http://densepose.org/). This library has been recently open sourced by FaceBook.
 
-[PyTorch 1.0](https://hackernoon.com/pytorch-1-0-468332ba5163)
+Today FB is announcing [PyTorch 1.0](https://hackernoon.com/pytorch-1-0-468332ba5163)
 
 Current flow to get PyTorch into production is:
 
@@ -92,7 +94,7 @@ C++ extensions
 [Custom C++ exetensions for PyTorch can be written](https://pytorch.org/tutorials/advanced/cpp_extension.html)
 
 - Uses [PyBind](https://github.com/pybind/pybind11)
-- `setup.py` can load the custom extension [can load](https://pytorch.org/tutorials/advanced/cpp_extension.html#building-with-setuptools) the custom extension
+- `setup.py` [can load](https://pytorch.org/tutorials/advanced/cpp_extension.html#building-with-setuptools) the custom extension
 
 Deep learning C++ bare metal for ML
 

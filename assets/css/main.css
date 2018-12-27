@@ -3,7 +3,7 @@
 /* Font size of 2.0 is too big, I'll reduce it */
 
 body {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   border-top: 5px solid #4d8ecb;
   line-height: 1.5em;
   padding: 0;
@@ -61,4 +61,42 @@ img.profile {
   border: 3px solid;
   padding: 15px;
   margin: 15px;
+}
+
+/* overrides */
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.post-content p {
+  font-size: 1.6rem;
+}
+
+li {
+  font-size: 1.6rem;
+}
+
+pre {
+  font-size: 1em;
+}
+
+.post-content img {
+  width: 50rem;
+}
+
+.post-excerpt img {
+  width: 50rem;
+}
+
+.post-header h2 {
+  font-size: 3.5rem;
+}
+
+.site-header {
+  font-size: 1.5rem;
 }

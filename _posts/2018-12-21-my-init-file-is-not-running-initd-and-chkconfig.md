@@ -32,7 +32,7 @@ Has a `-` where the run levels should go. I changed my runlevels to: `# chkconfi
 # remove the old file
 sudo chkconfig --del /etc/init.d/my-init
 
-# add fiel back with new changes
+# add file back with new changes
 sudo chkconfig --add /etc/init.d/my-init
 ```
 

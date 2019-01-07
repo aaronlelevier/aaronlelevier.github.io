@@ -64,6 +64,58 @@ sudo wpa_supplicant -i wlx40a5ef40734c -c wpa.conf -D wext -B
 
 Everything is now working. After a reboot, the Wifi still connects. I am smiling!
 
+# Steps only
+
+Here are the commands / steps only extracted from the above blogs.
+
+### Install driver
+
+First remove any old drivers in `/usr/src`
+
+Then, install new driver:
+
+```
+sudo apt purge rtl8812au-dkms
+sudo apt install git
+git clone https://github.com/abperiasamy/rtl8812AU_8821AU_linux.git
+cd rtl8812AU_8821AU_linux
+sudo make -f Makefile.dkms install
+sudo modprobe rtl8812au
+```
+
+Can view that driver is covered:
+
+```
+modinfo rtl8812au | grep A811
+```
+
+Run `ifconfig -a` and the Wifi interface should be up.
+
+### Configure netplan
+
+Configure netplan yaml file, `/etc/netplan/01-netcfg.yml` as shown above
+
+Run `sudo netplan apply` to apply changes.
+
+### wpasupplicant
+
+Install this package for WPA security support
+
+```
+sudo apt install wpasupplicant
+```
+
+### Reboot and check
+
+Reboot computer and check
+
+```
+reboot
+
+# should show the wifi interface now with an IP address if working
+ifconfig -a
+```
+
 # Some interesting points
 
 ## ifconfig

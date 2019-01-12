@@ -116,6 +116,32 @@ reboot
 ifconfig -a
 ```
 
+## Logging in remotely
+
+There are 3 steps to do this
+
+### 1. Assign a static IP address to your home network
+
+This can be done from logging into your Wifi router. The URL to login will be on the bottom of your Wifi router.
+
+I have a Netgear router, so I 
+
+### 2. The DL machine should be DHCP registered to an IP address
+
+For me, this was already done in the previous step using `netplan`
+
+### 3. Add port forwarding
+
+This is configurable when logged in to the Router config. For me, [this Netgear guide](https://www.noip.com/support/knowledgebase/setting-port-forwarding-netgear-router-genie-firmware/) helped me setup port forwarding.
+
+### 4. Test
+
+I tested by connecting to my phone Wifi hotspot with my laptop then tested that I could ssh to the DL machine
+
+```
+ssh -i ~/.ssh/my.pem username@hostname
+```
+
 # Some interesting points
 
 ## ifconfig

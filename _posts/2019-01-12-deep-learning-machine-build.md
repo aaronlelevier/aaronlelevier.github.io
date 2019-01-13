@@ -77,6 +77,26 @@ Miscellaneous
 - mouse
 - ethernet cable
 
+## Build Decisions
+
+There were a lot of decisions to make along. Here's a list of some of them and why I chose what I did.
+
+### GPU
+
+I chose to go with a used Nvidia GTX 1080Ti because these go for `$500`  on eBay, compared to `$800` for a RTX 2080 or `$1k+` for an RTX 2080Ti. I was using a Nvidia p4000 with 8GB memory on [Paperspace](https://www.paperspace.com/pricing), so when comparing specs, the GTX 1080Ti performs better than the p4000 and has 11GB memory, so this would be an upgrade.
+
+### CPU
+
+I was comparing the Intel 8700k or the Ryzen 2700x. Ryzen has more cores and more cache memory. Both are 3.7 GHz clockspeed. [Here](https://www.google.com/search?q=intel+8700k+vs+amd+2700x&pcmp=f) is a comparison.
+
+### RAM
+
+Paperspace did give me 30GB RAM. I went with 16GB RAM. Not sure if I need up to 30GB. I never hit this limit on Paperspace. The motherboard has 4 RAM slots, so this could be upgraded.
+
+### Power supply
+
+The suggested power supply is minimum 650w with this setup. I chose a 1000w power supply to future proof myself in case I wanted to get another GPU. The case has room for another, and this is Jeremy Howard of [https://www.fast.ai/](fast.ai)'s recommendation. One for running training jobs and a second for developing. I can only hope to get to that level someday.
+
 # Images
 
 DL Machine

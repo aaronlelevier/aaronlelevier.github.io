@@ -159,6 +159,45 @@ lsof -ti:<port> | xargs kill -9
 wget -bqc url
 ```
 
+## Wifi Interface setup and commands
+
+Make sure that the driver is downloaded. I used this [Github repo](https://github.com/abperiasamy/rtl8812AU_8821AU_linux) for my driver `rtl8812AU`
+
+Follow the `README.md` installation instructions:
+
+```sh
+# cd /usr/src/rtl8812au
+# sudo make clean
+# sudo make
+# sudo make install
+# sudo modprobe -a rtl8812au
+```
+
+Then check `ifconfig -a` to see if interface is present.
+
+`iwconfig` - will show wifi interfaces
+
+If the interface is present, from here run one of the following to register an ip address to the interface:
+
+```
+sudo ip link set wlp3s0 down
+sudo ip link set wlp3s0 up
+```
+
+Or restart machine:
+```
+sudo shutdown -r
+```
+
+Check if it's working
+
+```
+ping -c3 192.168.0.1
+```
+
+If you're using port forwarding, the IP address may have changed, so check the new IP address and adjust if needed.
+
+
 # References
 
 Nvidia official CUDA Toolkit Documentation:

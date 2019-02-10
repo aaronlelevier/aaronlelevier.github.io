@@ -124,7 +124,7 @@ There are 3 steps to do this
 
 This can be done from logging into your Wifi router. The URL to login will be on the bottom of your Wifi router.
 
-I have a Netgear router, so I 
+I have a Netgear router, so I
 
 ### 2. The DL machine should be DHCP registered to an IP address
 
@@ -161,22 +161,33 @@ After successfully installing the driver, I could see the wifi network as DISABL
 
 # Commands used
 
+```
+# list usb ports and connected devices
 lsusb
 
+# configure network interfaces
 ifconfig
 
+# configure wifi network interfaces
 iwconfig
 
+# get detailed wifi info
 iwlist <interface> s
 
+# dynamic kernal support module
 dkms
 
+# ip show an manipulate routing, network devices, interfaces
 ip link set <interface> up/down
 
+# list hardware
 lshw -C network
+
 
 netplan apply
 
 netplan --debug generate
 
+# check if there's internet
 ping -c3 www.ubuntu.com
+```

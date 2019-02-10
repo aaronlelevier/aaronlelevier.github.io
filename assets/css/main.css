@@ -73,10 +73,6 @@ h2 {
   font-size: 2.5rem;
 }
 
-.post-content p {
-  font-size: 1.6rem;
-}
-
 li {
   font-size: 1.6rem;
 }
@@ -85,12 +81,28 @@ pre {
   font-size: 1em;
 }
 
-.post-content img {
-  width: 50rem;
+a {
+  font-weight: bold;
+}
+
+/* blog posts list */
+
+.post-excerpt p {
+  text-align: center;
 }
 
 .post-excerpt img {
-  width: 50rem;
+  width: 30rem;
+}
+
+/* blog post detail */
+
+.post-content p {
+  font-size: 1.6rem;
+}
+
+.post-content img {
+  width: 100rem;
 }
 
 .post-header h2 {

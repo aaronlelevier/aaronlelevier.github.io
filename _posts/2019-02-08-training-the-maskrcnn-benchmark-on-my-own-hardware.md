@@ -90,3 +90,42 @@ OrderedDict([('bbox',
                            ('APm', 0.30504965888965696),
                            ('APl', 0.41763089921672736)]))])
 ```
+
+## February 10, 2019
+
+The model finished training after 3.5 days. Final output is prety close to the original.
+
+### model_final.pth
+
+This is the final output final that gets loaded by [PyTorch](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
+
+```python
+PATH = "model_final.pth"
+model = TheModelClass(*args, **kwargs)
+model.load_state_dict(torch.load(PATH))
+```
+
+![Imgur](https://i.imgur.com/4gQq2qy.png)
+
+### Final scores
+
+```
+OrderedDict([('bbox',
+              OrderedDict([('AP', 0.3787438742878195),
+                           ('AP50', 0.5955128018290543),
+                           ('AP75', 0.41442391560475855),
+                           ('APs', 0.21670904937263522),
+                           ('APm', 0.41267339913138185),
+                           ('APl', 0.49431726896178174)])),
+             ('segm',
+              OrderedDict([('AP', 0.34392779458751377),
+                           ('AP50', 0.5608730402994763),
+                           ('AP75', 0.3648390120652486),
+                           ('APs', 0.15867316023179875),
+                           ('APm', 0.36995797379803463),
+                           ('APl', 0.5052136454262031)]))])
+```
+
+## Next
+
+I'm going to collect data and train the model on my labeled data.

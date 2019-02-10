@@ -87,11 +87,8 @@ a {
 
 /* blog posts list */
 
-.post-excerpt p {
-  text-align: center;
-}
-
 .post-excerpt img {
+  text-align: center;
   width: 30rem;
 }
 

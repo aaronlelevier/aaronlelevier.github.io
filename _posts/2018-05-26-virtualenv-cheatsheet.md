@@ -14,12 +14,40 @@ A `virtualenv` is a way of having separate Python environments. It allows you to
 
 Run the following commands to create and activate your first `virtualenv`
 
+### virtualenv for Python3
+
 ```
+# installs PIP globally
 curl https://bootstrap.pypa.io/get-pip.py | python
-pip install virtualenv
-virtualenv venv
+
+# creates a virtualenv
+python3 -m venv venv
+
+# activates the virtualenv
 source venv/bin/activate
 ```
+
+### virtualenv for Python2
+
+```
+# installs PIP globally
+curl https://bootstrap.pypa.io/get-pip.py | python
+
+# installs virtualenv globally
+pip install virtualenv
+
+# creates a virtualenv
+virtualenv venv
+
+# activates the virtualenv
+source venv/bin/activate
+```
+
+### Verify it's working
+
+You should see the command line now starting with `(venv)`. This means that the virtualenv is active. 
+
+Run `which python` and it should point to a Python executable inside the virtualenv at `venv/bin/python`
 
 ## Quickstart Explanation
 
@@ -62,6 +90,8 @@ Create a new `virtualenv`
 ```
 virtualenv venv
 ```
+
+**Why is it named `venv`?**
 
 By convention, the name `venv` is used as the name of the `virtualenv`, but any name can be used.
 

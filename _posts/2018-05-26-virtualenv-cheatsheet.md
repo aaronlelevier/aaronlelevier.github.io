@@ -37,7 +37,7 @@ curl https://bootstrap.pypa.io/get-pip.py | python
 pip install virtualenv
 
 # creates a virtualenv
-virtualenv venv
+virtualenv -p python2.7 venv
 
 # activates the virtualenv
 source venv/bin/activate
@@ -45,7 +45,7 @@ source venv/bin/activate
 
 ### Verify it's working
 
-You should see the command line now starting with `(venv)`. This means that the virtualenv is active. 
+You should see the command line now starting with `(venv)`. This means that the virtualenv is active.
 
 Run `which python` and it should point to a Python executable inside the virtualenv at `venv/bin/python`
 
@@ -147,12 +147,12 @@ By using the path to the Python executable inside of the `venv`, the `virtualenv
 
 ```
 ~/Documents/github/jira (master) $ python
-Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 12:01:12) 
+Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 12:01:12)
 [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
 ~/Documents/github/jira (master) $ venv/bin/python
-Python 3.6.2 (v3.6.2:5fd33b5926, Jul 16 2017, 20:11:06) 
+Python 3.6.2 (v3.6.2:5fd33b5926, Jul 16 2017, 20:11:06)
 [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()

@@ -261,3 +261,46 @@ Then, bind the `dir` the model is in to a `volume` in the `tf.serving` docker co
 ### TFX Transform Docs
 
 [here](https://www.tensorflow.org/tfx/guide/transform) maybe I need to read these first
+
+# tf.serving
+
+this worked to serve the model w/ Docker
+
+```
+docker run -p 8501:8501 \
+  --mount type=bind,source=/tmp/mnist-wed/,target=/models/mnist \
+  -e MODEL_NAME=mnist -t tensorflow/serving
+```
+
+official example
+
+```
+docker run -p 8501:8501 \
+  --mount type=bind,source=/tmp/mnist-thurs/,target=/models/mnist \
+  -e MODEL_NAME=mnist -t tensorflow/serving
+```
+
+## Friday 5/17
+
+For mnist w/ `tf.serving`, this worked:
+
+Train and Export Model
+
+```
+tools/run_in_docker.sh python tensorflow_serving/example/mnist_saved_model.py \
+  --training_iteration=100 --model_version=1 /tmp/mnist
+```
+
+Serve
+
+```
+docker run -p 8501:8501 \
+  --mount type=bind,source=/tmp/mnist/,target=/models/mnist \
+  -e MODEL_NAME=mnist -t tensorflow/serving
+```
+
+Make request
+
+```
+python tensorflow_serving/example/mnist_client.py --num_tests=100 --server=127.0.0.1:8501
+```

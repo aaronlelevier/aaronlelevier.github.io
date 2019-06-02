@@ -83,7 +83,7 @@ In this talk, the speaker discusses how infrastructure can only be fully tested 
 
 # Unit test in Python
 
-Here is the prod and unit test code from one of my Python projects. Let’s take a look at this code and discuss it.
+Here is the prod and unit test code from one of my Python project on converting [Labelme](https://github.com/wkentaro/labelme) annotations to COCO dataset annotations project called [mlearning](https://github.com/aaronlelevier/mlearning). Let’s take a look at this code and discuss it. 
 
 <script src="https://gist.github.com/aaronlelevier/e53fceeaed8323b76212dbcc8c7079ec.js"></script>
 

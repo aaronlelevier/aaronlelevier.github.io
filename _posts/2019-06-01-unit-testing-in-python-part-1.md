@@ -92,17 +92,17 @@ There are two unit tests for the example class and it’s single method. One tes
 
 I’m going to discuss a couple of concepts and mechanics from this example code.
 
-## Concepts
+# Concepts
 
 Unit tests are calling prod code to make assertions about the inputs and outputs. A simple example would be if a function multiplies an input value by two, then the unit test would assert if 1 goes in, 2 comes out, if 3 goes in, 6 is returned, etc… 
 
 Inputs may vary. Sometimes functions have defaults or varying number of arguments. In this case, you would want multiple tests to assert the behavior of that function. The above code is an example of this. The prod code only has a single argument, but two situations are being tested.
 
-## Mechanics of Unit Testing in Python
+# Mechanics of Unit Testing in Python
 
 If you go to the Github repo linked in the description of the gist, or you may be able to derive most of this information from the gist. Here are a few things going on.
 
-### The Test Runner
+## The Test Runner
 
 To run unit tests, Python’s unittest test runner needs to be able to discover them. 
 
@@ -114,17 +114,17 @@ The test class should subclass unittest.TestCase. This is because there are setU
 
 Each test method in the class should start with “test_”. The test runner will call these test methods and report success or failure. Test classes are just Python classes. They can have other methods for test helpers, etc… and then these would not start with “test_” because they are a helper, not a test method.
 
-### Pytest
+## Pytest
 
 The example code is using [pytest](https://docs.pytest.org/en/latest/). I prefer the test syntax of pytest to the standard library unittest methods. Also, pytest gives nice red/green colored highlighting on test output. There is a table in the unittest [documentation](https://docs.python.org/3/library/unittest.html) for the different assertion methods. The testing semantics are the same, just with different syntax.
 
 In the example code, the Python assert keyword can be used to assert if something is truthy or falsy. Assert if equal or not equal, etc…
 
-### Test Class Names
+## Test Class Names
 
 I like to name the test class the same as the prod class, and then add “Tests” to the end. This makes the test method class easy to search for and identify which prod code the test class relates to.
 
-### Test Method Names
+## Test Method Names
 
 Test methods have to start with “test_”. For their actual name, I like to have the name of the prod method that I’m testing in the test method name. This makes it easier when searching for tests for a given method. 
 
@@ -132,7 +132,7 @@ A co-worker of mine, [Vince Grato](https://www.linkedin.com/in/vgrato/), said to
 
 Another co-worker of mine, [Bill Heaton](https://twitter.com/pixelhandler?lang=en), said something similar. He said that when he wants to know how some code or library works, he first runs the test suite, and then reads the method names output by the test run to see what the code is doing. This follows along with what Vince said.
 
-### Format of the Test Method Body
+## Format of the Test Method Body
 
 For the test method body, I like to follow the format of:
 
@@ -142,13 +142,13 @@ This is the format of the test method bodies of the example test code above. Thi
 
 I believe that I got this from Kent Beck’s book, [TDD by Example](https://www.eecs.yorku.ca/course_archive/2003-04/W/3311/sectionM/case_studies/money/KentBeck_TDD_byexample.pdf), but I am not sure. Either way linespaces can be used to denote meaning in code, and this is a good place for them.
 
-### Test Method Ordering
+## Test Method Ordering
 
 I prefer to put the test methods in the same order as the prod methods. This makes it easier to relate the prod code to the test code if they follow the same method declaration ordering. 
 
 The above code example is only for a single prod method, but if there were a second method, then the test method would be ordered below the current test methods.
 
-### Test Code Doesn’t Look Like Prod Code
+## Test Code Doesn’t Look Like Prod Code
 
 When I worked with Toran, he said this to me one time:
 

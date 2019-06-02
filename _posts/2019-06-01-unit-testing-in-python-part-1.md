@@ -4,8 +4,6 @@ title: Unit Testing in Python - Part 1
 tags: [Python, Unit Testing]
 ---
 
-# Overview
-
 This is going to be a multi-part blog. Testing is too big of a subject to cover in one blog. These blog(s) will cover what unit testing is and some thoughts and concepts on unit testing in order to best apply it. I will also show code examples and discuss them.
 
 # Introduction

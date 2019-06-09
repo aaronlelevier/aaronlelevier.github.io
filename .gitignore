@@ -2,3 +2,7 @@ _site/
 Gemfile.lock
 .DS_Store
 .sass-cache/
+venv/
+*.pyc
+__pycache__/
+iam.egg-info/

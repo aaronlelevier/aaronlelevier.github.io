@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Unit testing in Python - Part 0
+title: Test Driven Development with Python
 tags: [Python, Unit Testing]
 ---
 
-For this blog, I'm going to code up an example project in Python with unit tests. I'll discuss unit testing while building doing the project. This blog should have been a precursor to [Unit Testing in Python - Part 1](https://aaronlelevier.github.io/unit-testing-in-python-part-1/), so I'm doing it now. Okay, I hope that you enjoy. Let's get started.
+For this blog, I'm going to code up an example project in Python with unit tests. I'll discuss unit testing while building doing the project. This blog could have been a precursor to [Unit Testing Concepts with Python](https://aaronlelevier.github.io/unit-testing-concepts-with-python/), which discusses more concepts then application. Okay, I hope that you enjoy. Let's get started.
 
 # Project Overview
 

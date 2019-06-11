@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Unit Testing in Python - Part 1
+title: Unit Testing Concepts with Python
 tags: [Python, Unit Testing]
 ---
 
-This is going to be a multi-part blog. Testing is too big of a subject to cover in one blog. These blog(s) will cover what unit testing is and some thoughts and concepts on unit testing in order to best apply it. I will also show code examples and discuss them.
+In this blog I am going to discuss some concepts of Unit Testing. I will give some background about my experience and how I got started on unit testing. Then some thoughts and concepts on unit testing in order to best apply it. I will then show a code example in Python and discuss different unit testing concepts used.
 
 # Introduction
 
-Let me start out by introducing myself and the person that got me started on testing.  Hi, my name is Aaron Lelevier. I’ve been using Python for 6 years, 5 years professionally. Prior to that and with some overlap, I did MsSQL for 3 years. 
+Let me start out by introducing myself and the person that got me started on testing.  Hi, my name is Aaron Lelevier. I’ve been using Python for 6 years, 5 years professionally. Prior to that and with some overlap, I did MsSQL for 3 years.
 
-The person that got me started on unit testing was [Toran Billups](https://twitter.com/toranb). This was 4 years ago. I was hired on at Big Sky Technologies as a backend Python Django Developer on a team of 3, myself, [Scott Newcomer](https://twitter.com/puekey), who did frontend EmberJs, and Toran Billups, who’s background is in Javascript and Test Driven Development (TDD), as Tech Lead. I didn’t know this at the time, but Toran had only agreed to come on the team as Tech Lead if the team embraced testing. 
+The person that got me started on unit testing was [Toran Billups](https://twitter.com/toranb). This was 4 years ago. I was hired on at Big Sky Technologies as a backend Python Django Developer on a team of 3, myself, [Scott Newcomer](https://twitter.com/puekey), who did frontend EmberJs, and Toran Billups, who’s background is in Javascript and Test Driven Development (TDD), as Tech Lead. I didn’t know this at the time, but Toran had only agreed to come on the team as Tech Lead if the team embraced testing.
 
 Toran made a big impact on me. I’d like to share some of his quotes, and give examples with how they apply.
 
@@ -30,9 +30,9 @@ This is true, but also for other reasons. After a feature is considered working,
 
 # Is this a TDD blog?
 
-No, it is not. I bring it up as part of the previous quotes, and from some of what Toran taught me. Test First has its place. It is not the only way to test though. 
+No, it is not. I bring it up as part of the previous quotes, and from some of what Toran taught me. Test First has its place. It is not the only way to test though.
 
-Sometimes what you are doing is too unknown, so writing tests for something you’ve never done before is too slow, or simply doesn’t work. An example of this is learning a new programming language or framework. It’s much easier to learn by writing code to do the thing then to write tests. For machine learning, this is also true. Some parts of machine learning like data transformations are good places for heavy testing and even TDD. Making a model with layers and iterating on that model may not be. 
+Sometimes what you are doing is too unknown, so writing tests for something you’ve never done before is too slow, or simply doesn’t work. An example of this is learning a new programming language or framework. It’s much easier to learn by writing code to do the thing then to write tests. For machine learning, this is also true. Some parts of machine learning like data transformations are good places for heavy testing and even TDD. Making a model with layers and iterating on that model may not be.
 
 There is the concept of Defect Driven Testing (DDT). This is when a defect is discovered, then a test can be written to capture that defect (or bug), so it won’t resurface. Here, the testing scenario isn’t known ahead of time, or else the bug wouldn’t have existed, so TDD doesn’t apply.
 
@@ -46,13 +46,13 @@ This is best said by this quote from Toran:
 
 This could be an automated test, whether it’s a unit or integration test. It could be a manual test by someone on the QA team or it could be your customers testing in Prod by using your product. Ideally, it’s some sort of automated test though because these are the cheapest test to run, and we don’t want our customers to be the first to test and discover bugs, then have to report them and wait for them to be fixed!
 
-Let’s start with an overview of unit testing and see a simple application of it in Python for this first blog. 
+Let’s start with an overview of unit testing and see a simple application of it in Python for this first blog.
 
 # Unit testing overview
 
 What is a unit test?
 
-A unit test is a test for a single piece of functionality in your code. It would be a test for a single function that tests a single code path. If this function, for example, has an if/else block, you would want a unit test for the “if” code path in the function, and a separate unit test for the “else” code path in the function. 
+A unit test is a test for a single piece of functionality in your code. It would be a test for a single function that tests a single code path. If this function, for example, has an if/else block, you would want a unit test for the “if” code path in the function, and a separate unit test for the “else” code path in the function.
 
 Unit tests are cheap. They are the quickest tests to write and fastests tests to run. They won’t prove that your whole application works. They prove that pieces of the application work in isolation with certain inputs and then verify the outputs.
 
@@ -83,7 +83,7 @@ In this talk, the speaker discusses how infrastructure can only be fully tested 
 
 # Unit test in Python
 
-Here is the prod and unit test code from one of my Python project on converting [Labelme](https://github.com/wkentaro/labelme) annotations to COCO dataset annotations project called [mlearning](https://github.com/aaronlelevier/mlearning). Let’s take a look at this code and discuss it. 
+Here is the prod and unit test code from one of my Python project on converting [Labelme](https://github.com/wkentaro/labelme) annotations to COCO dataset annotations project called [mlearning](https://github.com/aaronlelevier/mlearning). Let’s take a look at this code and discuss it.
 
 <script src="https://gist.github.com/aaronlelevier/e53fceeaed8323b76212dbcc8c7079ec.js"></script>
 
@@ -94,7 +94,7 @@ I’m going to discuss a couple of concepts and mechanics from this example code
 
 # Concepts
 
-Unit tests are calling prod code to make assertions about the inputs and outputs. A simple example would be if a function multiplies an input value by two, then the unit test would assert if 1 goes in, 2 comes out, if 3 goes in, 6 is returned, etc… 
+Unit tests are calling prod code to make assertions about the inputs and outputs. A simple example would be if a function multiplies an input value by two, then the unit test would assert if 1 goes in, 2 comes out, if 3 goes in, 6 is returned, etc…
 
 Inputs may vary. Sometimes functions have defaults or varying number of arguments. In this case, you would want multiple tests to assert the behavior of that function. The above code is an example of this. The prod code only has a single argument, but two situations are being tested.
 
@@ -104,7 +104,7 @@ If you go to the Github repo linked in the description of the gist, or you may b
 
 ## The Test Runner
 
-To run unit tests, Python’s unittest test runner needs to be able to discover them. 
+To run unit tests, Python’s unittest test runner needs to be able to discover them.
 
 I like to put my tests in a directory called “tests” at the project directory level. This is a known pattern. [django-rest-framework](https://github.com/encode/django-rest-framework/tree/master) uses this pattern. Another pattern is to put the tests in the same directory as the prod code file and append “_test” to the name. [TensorFlow Extended](https://github.com/tensorflow/tfx) uses this pattern. I prefer the former because it separates test code from prod code.
 
@@ -126,7 +126,7 @@ I like to name the test class the same as the prod class, and then add “Tests�
 
 ## Test Method Names
 
-Test methods have to start with “test_”. For their actual name, I like to have the name of the prod method that I’m testing in the test method name. This makes it easier when searching for tests for a given method. 
+Test methods have to start with “test_”. For their actual name, I like to have the name of the prod method that I’m testing in the test method name. This makes it easier when searching for tests for a given method.
 
 A co-worker of mine, [Vince Grato](https://www.linkedin.com/in/vgrato/), said to me once, I use rspec for naming tests. He was calling me out because I had named my test methods based on the prod methods and then with a suffix like “true” or “false”, which would be the output that they test for, but the test method name didn’t say anything about what the test actually did. Over time, and now currently, this is how I name my tests. I still like to have the prod method name in the test method name, and then append a description of what the test is doing.
 
@@ -144,7 +144,7 @@ I believe that I got this from Kent Beck’s book, [TDD by Example](https://www.
 
 ## Test Method Ordering
 
-I prefer to put the test methods in the same order as the prod methods. This makes it easier to relate the prod code to the test code if they follow the same method declaration ordering. 
+I prefer to put the test methods in the same order as the prod methods. This makes it easier to relate the prod code to the test code if they follow the same method declaration ordering.
 
 The above code example is only for a single prod method, but if there were a second method, then the test method would be ordered below the current test methods.
 
@@ -156,7 +156,7 @@ When I worked with Toran, he said this to me one time:
 
 Toran is really nice. I asked him for constructive feedback one time when we were having reviews, and he only told me positive things, but I could also glean some things that I could improve on even though he was so positive.
 
-That said, the above quote means that I had missed a lot in the test coverage. This stemmed from me thinking that code looks like code and test code looks like prod code. It’s object oriented, has arguments, etc… 
+That said, the above quote means that I had missed a lot in the test coverage. This stemmed from me thinking that code looks like code and test code looks like prod code. It’s object oriented, has arguments, etc…
 
 The test in question was asserting return values of an API endpoint. The API endpoint was returning 10-15 fields with data, but my test was only testing that 2-3 came back. The prod code could have half of it’s fields removed for example. Maybe it’s a cut/paste error, and it’s not seen in code review. If so, the test would never catch this because it doesn’t assert the full behavior of the API endpoint. This leads to another quote:
 

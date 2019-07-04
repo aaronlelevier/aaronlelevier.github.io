@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Erlang Maps and Binaries Codejam
-tags: [Erlang, Codejam]
+title: Erlang and Python Codejam
+tags: [Erlang, Python, Codejam]
 ---
 
 If you can read this Erlang code jam, the syntax is kind of insane. Just think about it. This is how to manipulate primitive types in Erlang. But not just that. After that is a Python codejam. Python is my main language. It will be fun to compare. 

@@ -32,15 +32,15 @@ Some programming languages, use immutable objects, for example [Erlang](https://
 
 The VO can be a business object, a concept, rule, etc... but it should be a noun. The VO can then be read by other objects in the system, like those that do API writes.
 
-### Program to an interface not an implementation
+## Program to an interface not an implementation
 
 The VO should have a Type (Interface). This will allow creation of an object with the same interface in different circumstances that are then understood by other objects in the system.
 
-### Value Objects and Eliminators
+## Value Objects and Eliminators
 
 An Eliminator, from the book [The Little Typer](https://thelittletyper.com/), is a function that takes a value as an argument. An Eliminator then must understand the value's type. This pattern scales well if the VO's complies to an interface, and then the Eliminator can be programmed to work with that interface.
 
-### CQRS
+## CQRS
 
 VO's and Eliminators also natrually reinforce [CQRS](https://martinfowler.com/bliki/CQRS.html) or Command Query Resource Separation, which is the pattern of separating code for reading and writing. The VO's should only read data and the Eliminators, not all but some, are then used for API writes.
 

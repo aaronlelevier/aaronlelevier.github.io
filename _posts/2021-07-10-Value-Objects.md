@@ -10,9 +10,9 @@ Hello, my name is Aaron Lelevier, and I hope that you enjoy the blog and come aw
 
 ## What is a Value Object
 
-Let's start with a definition. A value object (VO) is an object that stores some data that is logically grouped together.
+Let's start with a definition. A value object (VO) is an object that stores some data that is logically grouped together. It can have data attributes but not behavior.
 
-The VO can then represent an object in the business domain, concept, or rule(s). 
+The VO can represent an object in the business domain, concept, or rule(s). 
 
 The VO should be properly constructed, so it recieves all arguments when it is initialized and does not call separate methods at a later time to mutate itself.
 

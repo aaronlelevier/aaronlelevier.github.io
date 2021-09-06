@@ -6,6 +6,7 @@ tags: [Golang, VSCode]
 
 Here is how to create Golang code snippets in VSCode
 
+## Here is how to create Golang code snippets in VSCode
 
 Go to **Preferences > User Snippets**
 

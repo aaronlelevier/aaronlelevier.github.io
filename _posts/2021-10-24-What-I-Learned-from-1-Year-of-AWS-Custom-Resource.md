@@ -1,10 +1,10 @@
 ---
 layout: post
-title: What I Learned from 1 Year of AWS CustomResource
+title: What I Learned from 1 Year of AWS Custom Resource
 tags: [AWS, AWS Custom Resource]
 ---
 
-The title of this article could have also been, *"Using AWS CustomResource's."* or maybe *"AWS CustomResource Gotchas and how to avoid them."*   The goal of this article is to talk about usage, gotchas, and tell a story how they relate. With that said, this article is meant to go in addition to the AWS Official Documentation, linked in the [References](#References) section, and highlite a few things with the way that they work.
+The title of this article could have also been, *"Using AWS Custom Resource's."* or maybe *"AWS Custom Resource Gotchas and how to avoid them."*   The goal of this article is to talk about usage, gotchas, and tell a story how they relate. With that said, this article is meant to go in addition to the AWS Official Documentation, linked in the [References](#References) section, and highlite a few things with the way that they work.
 
 ## What is an ACR
 

@@ -17,11 +17,15 @@ There are two ACR types:
 
 This article covers AWS Lambda as this is the common case.
 
-ACRs have a  Request<sub>2</sub> and Response<sub>3</sub> structure.
+ACRs have a Request<sub>2</sub> and Response<sub>3</sub> structure.
 
 ## The first thing you learn
 
 The first major lesson of AWS Lambda ACRs is that they must always return a Response. If an ACR errors and fails to send a Response, the CloudFormation (CFN) parent stack invoking the ACR will spin for 1 hour, and eventually timeout, and fail.
+
+#### The ACR Error Kernel
+
+The ACR always sending a Response could be descibed as the "Error Kernel", which is a concept that  Joe Armstrong<sub>11</sub> introduces in his talk *"The Do's and Don'ts of Error Handling"*<sub>12</sub>
 
 ## How to always send a Response
 
@@ -87,6 +91,12 @@ An ACR, like any other AWS Resource can be deployed with CFN<sub>4</sub>, AWS SA
 
 An ACR can NOT be replaced via tearing down and rebuilding if it is referenced in another CFN Stack, regardless of referencing the ACR directly or as  variable using an SSM Parameter<sub>9</sub> or CFN ImportValue<sub>10</sub>. You must solve for this.
 
+## Rollback
+
+Rollback by default will use the same AWS Lambda code. This will be a problem if the Lambda suffers a bad update, e.g. a coding error, as the ACR will fail, then on rollback, if the same code path is used, rollback will also fail. You must solve for this as well.
+
+Some strategies for this could be to use a stable version of the Lambda on rollback, or to always roll forward, and so on.
+
 ## Finally
 
 Okay, now that I know everything about ACRs, can I go write some code?
@@ -117,3 +127,7 @@ Thank you.
 [9] - [AWS::SSM::Parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)
 
 [10] - [Fn::ImportValue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html)
+
+[11] - [Joe Armstrong](https://en.wikipedia.org/wiki/Joe_Armstrong_(programmer))
+
+[12] - [The Do's and Don'ts of Error Handling](https://youtu.be/TTM_b7EJg5E)

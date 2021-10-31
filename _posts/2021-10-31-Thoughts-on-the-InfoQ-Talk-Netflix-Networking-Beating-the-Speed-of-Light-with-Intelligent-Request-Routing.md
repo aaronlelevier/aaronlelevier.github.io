@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thoughts on the InfoQ talk: Netflix Networking: Beating the Speed of Light with Intelligent Request Routing
+title: Thoughts on the InfoQ talk Netflix Networking Beating the Speed of Light with Intelligent Request Routing
 tags: [Networking, Netflix, InfoQ, Talks]
 ---
 

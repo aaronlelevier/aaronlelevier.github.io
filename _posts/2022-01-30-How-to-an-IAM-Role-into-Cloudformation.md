@@ -14,3 +14,4 @@ And here are the docs for an example of how to import a resource: https://docs.a
 
 I created an example Github repo with working code that follows this process using the [boto3](https://aws.amazon.com/sdk-for-python/). Please refer to this repo for example templates on the process. There is also a Jupyter notebook with documentation on how the created CFN template and IAM Role resource in AWS are updated at different steps of the process: https://github.com/aaronlelevier/import-iam-to-cfn
 
+At the end of this test, I tried deleting the Role via the CFN stack, and the Role in AWS was not deleted and had to be deleted outside of the CFN stack.

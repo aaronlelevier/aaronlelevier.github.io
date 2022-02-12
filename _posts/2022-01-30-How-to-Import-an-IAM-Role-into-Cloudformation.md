@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to an IAM Role into Cloudformation
+title: How Import to an IAM Role into Cloudformation
 tags: [AWS, IAM, Cloudformation]
 ---
 

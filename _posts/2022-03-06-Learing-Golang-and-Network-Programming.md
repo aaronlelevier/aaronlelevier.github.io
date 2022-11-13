@@ -1,4 +1,8 @@
-# Learning Golang and Network Programming
+---
+layout: post
+title: Learning Golang and Network Programming
+tags: [Golang]
+---
 
 This blog contains notes on mostly [NTP](http://www.ntp.org/) Learning in conjunction with reading the `ntpc.go` module in this Github repo [vladimirvivien/go-networking](https://github.com/vladimirvivien/go-networking).
 

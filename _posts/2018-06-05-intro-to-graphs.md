@@ -179,6 +179,10 @@ An [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) is a list of n
 
 - comprehensive list of graph algorithms
 
+[Graph in Data Structure](https://www.scaler.com/topics/data-structures/graph-in-data-structure/)
+
+- A complete tutorial on graphs in data structures with examples 
+
 [Neo4j Graph Algorithms](https://github.com/neo4j-contrib/neo4j-graph-algorithms)
 
 - Neo4j at the time of this writing has 300+ algorithms for use with it's graph database

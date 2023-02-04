@@ -43,7 +43,7 @@ None of the above attempts worked as far as enabling me to start reading book 1 
 September 4, 2023, which happened to be around the same time that my youngest started school, I started reading book 1. I took the time to understand the concepts and research what I didn't know. I've been reading the book in the morning. I am a morning person, and it is a nice start to the day to get the new knowledge and consider things differently.
 
 ## Now
-It is now February 3, 2023, and I am on page 425 of 827 pages, so I am half way.
+It is now February 2, 2023, and I am on page 425 of 827 pages, so I am half way.
 
 ## Conclusion
 I think the difference was having enough reasons, enjoying what you are doing, and taking the time to learn.

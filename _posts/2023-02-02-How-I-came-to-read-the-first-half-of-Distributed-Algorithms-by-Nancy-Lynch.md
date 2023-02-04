@@ -7,7 +7,7 @@ tags: [Distributed, Algorithms, Programming]
 This blog is my story of how I came to read half of Distributed Algorithms by Nancy Lynch. This is a personal story, but also has ideas for how to learn and get unstuck.
 
 ## The beginning
-I first learned of the Distributed Algorithms book from watching the video [Distributed Systems Theory for Practical Engineers](https://youtu.be/clYXrZtKhGs). In this video, the speaker references 4 books:
+I first learned of [Distributed Algorithms](http://groups.csail.mit.edu/tds/distalgs.html) book from watching the video [Distributed Systems Theory for Practical Engineers](https://youtu.be/clYXrZtKhGs). In this video, the speaker references 4 books:
 
 1. Distributed Algorithms by Nancy Lynch
 1. Reliable and Secure Distributed Programming by Christian Cachin

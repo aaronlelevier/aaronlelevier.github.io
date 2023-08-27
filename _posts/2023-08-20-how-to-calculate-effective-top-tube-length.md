@@ -8,7 +8,7 @@ tags: [Bike, Math, Erlang]
 
 The problem is that [Airdrop Bikes](https://www.airdropbikes.com/) is sold out of size medium Filter framesets, and the geometry chart doesn't show effective top tube, which is another important number, in addition to reach, when calculating bike fit.
 
-# Geometry Chart legend
+### Geometry Chart legend
 
 This is the legend for the red triangle overlayed on the Airdrop Filter geometry chart:
 
@@ -24,13 +24,15 @@ b or Beta - ? - effective seat tube angle
 
 I was going purely off of reach, and the medium is 455 vs. a large, which is 475. I've owned a [460](https://geometrygeeks.bike/bike/commencal-meta-am-29-2019/) and [465](https://chromagbikes.com/products/stylus-2020) reach bike, so 455 sounds good if I want to size down, but Airdrop is sold out. The chart doesn't list the effective top tube, which is the horizontal distance from the stack height to the saddle, so let's calculate it.
 
+# How to calculate
+
 In order to calculate effective top tube length, we need to calcuate the effective seat tube angle, which is the angle of the seat tube at the stack height. Then, using the geometry of right triangles, we can calculate C, the hypotenuse, and then A, using C and one angle Alpha or Beta.
 
-# Geometry numbers
+## Geometry numbers
 
 ![Geometry Numbers](https://i.imgur.com/aNHDcfn.png "Geometry Numbers")
 
-# How to calculate the effective seat tube angle
+## How to calculate the effective seat tube angle
 
 With a stack height of 614.5, we can take the difference in distance from the measured seat angles in the geometry numbers at 600 and 700, and find the effective seat tube angle.
 
@@ -49,7 +51,7 @@ sta(Low, High, Stack) ->
 78.613
 ```
 
-# How to calculate the effective seat tube length
+## How to calculate the effective seat tube length
 
 This is the hypotenuse, which is the red `C` in the diagram.
 
@@ -64,7 +66,7 @@ c(Beta, B) ->
 78.613
 ```
 
-# How to calculate a side given with an angle and the hypotenuse
+## How to calculate a side given with an angle and the hypotenuse
 
 We can now calculate the red `A`.
 
@@ -76,7 +78,7 @@ a(C, Beta) ->
 123.7598468837922
 ```
 
-# Finally, calculate the effective top tube
+## Finally, calculate the effective top tube
 
 This is the red `A` plus the black `A` for reach:
 

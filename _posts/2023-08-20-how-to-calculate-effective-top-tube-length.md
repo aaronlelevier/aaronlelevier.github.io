@@ -97,3 +97,11 @@ The effective top tube (ETT) is actually shorter than I expected. The previous r
 Another note is that the bike with an ETT of 619 has a stack height of 633.5 vs. the 614 ETT bike with a stack height of 597. The latter feels slightly longer, so stack height comes into play as well. The Airdrop bike has a stack height of 614.5, so it will feel in the middle of these two with how stack height affects position on the bike.
 
 The large is said to fit a rider height of 175-188mm, and I'm 180mm, so I guess they are correct. But, I didn't just want to go by their recommendation. Anyways, it was fun to calcuate the geometry.
+
+# References
+
+- The above code snippets were extracted from this module: https://github.com/aaronlelevier/pace/blob/develop/pace/src/pace.erl
+- Helpful resource for calculating right triangle geometry: https://www.omnicalculator.com/math/right-triangle-side-angle
+- Airdrop Filter 2023: https://www.airdropbikes.com/collections/airdrop-filter-frames/products/filter-rockshox-super-deluxe-air-ultimate-2023
+- Chromag Stylus 2020: https://chromagbikes.com/products/stylus-2020
+- Commencal Meta 29 2019: https://geometrygeeks.bike/bike/commencal-meta-am-29-2019/

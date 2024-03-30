@@ -6,17 +6,15 @@ tags: [Bike, Math, Erlang]
 
 ![Geometry Chart](https://i.imgur.com/D0T1w64.png "Geometry Chart")
 
-Don't just rely on mountain bike reach! Effective top tube(ETT) is also an important number for bike size fit. Recently, I was looking at [Airdrop Bikes](https://www.airdropbikes.com/) and became interested in the [Airdrop Filter](https://www.airdropbikes.com/en-us/pages/airdrop-filter), but sizes were limited. This blog is my research on figuring out ETT and if an in stock size would fit.
+## Summary
 
-## Background
+Don't just rely on mountain bike reach! Effective top tube(ETT) is also an important number for bike size fit. Recently, I was looking at [Airdrop Bikes](https://www.airdropbikes.com/) and became interested in the [Airdrop Filter](https://www.airdropbikes.com/en-us/pages/airdrop-filter), but sizes were limited. This blog is my research on figuring out ETT and if an in stock size would fit.
 
 I have ridden a [Commencal Meta 29](https://geometrygeeks.bike/bike/commencal-meta-am-29-2019/) with a reach of 460 and seat tube angle(STA) of 76.5.
 
 I have ridden a [Chromag Stylus](https://chromagbikes.com/products/stylus-2020) with a reach of 465 and STA of 76.0.
 
-## Question
-
-Will an [Airdrop Filter](https://www.airdropbikes.com/en-us/pages/airdrop-filter) with a reach of 475 and STA of 78.2 fit? (This is size large and medium is out of stock).
+Question, will an [Airdrop Filter](https://www.airdropbikes.com/en-us/pages/airdrop-filter) with a reach of 475 and STA of 78.2 fit? (This is size large and medium is out of stock).
 
 ## Geometry Numbers
 

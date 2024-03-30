@@ -35,7 +35,7 @@ HeightHigh = 700.0.
 STAHigh = 78.7.
 Reach = 475.0.
 
-% seat tube able(STA) difference
+% seat tube angle(STA) difference
 STADiff = abs(STALow - STAHigh).
 % percentage difference between high and low STA
 PercentHeightDiff = abs(HeightLow - Stack) / abs(HeightLow - HeightHigh).

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What reading Distributed Algorithms by Nancy Lynch cover-to-cover meant to me.md
+title: What reading Distributed Algorithms by Nancy Lynch cover-to-cover meant to me
 tags: [Distributed, Algorithms, Programming]
 
 ---
@@ -15,7 +15,7 @@ I remember reading the Erlang finite state machine (FSM) [statem module docs](ht
 
 It is now June 2023. I was driving my kids to school, and the school year was ending, and I told my kids.
 
-> "I read Distributed Algorithms by Nancy Lynch and it took me from September (2022) to May (2023). The same as the school year for you guys. It took me a while, but I read the whole book." 
+> "I read Distributed Algorithms by Nancy Lynch and it took me from September (2022) to May (2023). The same as the school year for you guys. It took me a while, but I read the whole book."
 
 ## The difference
 
@@ -34,7 +34,7 @@ Here are some of the concepts that the author assumed knowledge of. These lead t
 
 ## Impressions
 
-The DA book is an academic book with so many concepts. If you are in the field of computer science or math, I highly recommend this book to you. I can say that I understood what safety and liveness were, but this book adds so many rich concepts to their understanding. For example, it explains low-level and high-level fairness in the context of mutual exclusion, where low-level is concerned with the user steps, and high-level is concerned with granting of the resource. High-level fairness can be guaranteed in some cases and not low-level fairness. 
+The DA book is an academic book with so many concepts. If you are in the field of computer science or math, I highly recommend this book to you. I can say that I understood what safety and liveness were, but this book adds so many rich concepts to their understanding. For example, it explains low-level and high-level fairness in the context of mutual exclusion, where low-level is concerned with the user steps, and high-level is concerned with granting of the resource. High-level fairness can be guaranteed in some cases and not low-level fairness.
 
 Other important concepts are:
 
